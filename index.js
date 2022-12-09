@@ -222,12 +222,12 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
                 }
 
                     await delay(200)
-                    var stop = false;
-                    setTimeout(()=>{ stop = true; }, 30 * 1000);
 
                     do {
                         kodeotp = await functionVerifemail(uname, email.split('@')[1]);
                         console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Wait for verif OTP..`)
+                        var stop = false;
+                        setTimeout(()=>{ stop = true; }, 30 * 1000);
                         if (stop){
                             let errMsg = `[ ${moment().format("HH:mm:ss")} ] ` + `Ulang Terlalu lama menunggu otp
                             \r=========================================================================\n`
