@@ -1,3 +1,5 @@
+[OUTDATED]
+Because the devv adding captha
 
 How to use
 1. git clone https://github.com/merayupi/Primal.git
