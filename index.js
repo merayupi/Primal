@@ -195,13 +195,14 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
 
 
 (async() => {
+    console.clear()
     console.log(`[ ${moment().format("HH:mm:ss")} ] ` + "========Ngebot Primal By Conny========\n")
     var tanyareff = readline.question(`[ ${moment().format("HH:mm:ss")} ] ` + 'Kode reff : ');
     var jumlah = readline.question(`[ ${moment().format("HH:mm:ss")} ] ` + 'Jumlah reff : ')
 
         for (var i = 0; i < jumlah; i++) {
             try {
-                const list = ['tipsehat.click','pointthing.biz']
+                const list = ['tipsehat.click','pointthing.biz','atriushealth.info','blacksong.pw']
                 const list1 = list[Math.floor(Math.random() * list.length)];
                 var name = random.first()
                 var lastname = random.last()
