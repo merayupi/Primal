@@ -256,16 +256,10 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
                     await delay(500)
                     throw errMsg
                 }
-                // console.log('Set username...');
-                // const setUname = await setUsername("akmaldira69", accessToken);
-                // if (!setUname.success) {
-                //     console.log(setUname);
-                //     process.exit(1);
-                // }
                 console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Sukses reff ke ${i}`)
                 console.log('=========================================================================\n')
                 await delay(100)
-                
+
             } catch (error) {
                 console.log(error)
                 i--;
