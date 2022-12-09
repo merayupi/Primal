@@ -201,7 +201,7 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
 
         for (var i = 0; i < jumlah; i++) {
             try {
-                const list = ['tipsehat.click']
+                const list = ['tipsehat.click','pointthing.biz']
                 const list1 = list[Math.floor(Math.random() * list.length)];
                 var name = random.first()
                 var lastname = random.last()
@@ -218,7 +218,6 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
                     \r=========================================================================\n`
                     await delay(500)
                     throw errMsg
-                    
                 }
 
                     await delay(200)
@@ -255,7 +254,7 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
                 }
                 console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Sukses reff ke ${i}`)
                 console.log('=========================================================================\n')
-                await delay(100)
+                await delay(200)
 
             } catch (error) {
                 console.log(error)
