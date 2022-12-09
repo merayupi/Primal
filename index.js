@@ -202,7 +202,7 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
 
         for (var i = 0; i < jumlah; i++) {
             try {
-                const list = ['tipsehat.click','pointthing.biz','atriushealth.info','blacksong.pw']
+                const list = ['victoriazakopane.pl']
                 const list1 = list[Math.floor(Math.random() * list.length)];
                 var name = random.first()
                 var lastname = random.last()
