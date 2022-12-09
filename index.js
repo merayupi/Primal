@@ -223,21 +223,18 @@ const functionVerifemail = (email, domain) => new Promise((resolve, reject) => {
 
                     await delay(200)
                     var stop = false;
-                    setTimeout(()=>{ stop = true; }, 40 * 1000);
+                    setTimeout(()=>{ stop = true; }, 30 * 1000);
 
                     do {
                         kodeotp = await functionVerifemail(uname, email.split('@')[1]);
-                        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Wait for veriff OTP..`)
+                        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Wait for verif OTP..`)
                         if (stop){
-                            break;
+                            let errMsg = `[ ${moment().format("HH:mm:ss")} ] ` + `Ulang Terlalu lama menunggu otp
+                            \r=========================================================================\n`
+                            await delay(500)
+                            throw errMsg
                         }
                     } while (!kodeotp);
-                    if(kodeotp==undefined){
-                        let errMsg = `[ ${moment().format("HH:mm:ss")} ] ` + `Ulang Terlalu lama menunggu otp
-                        \r=========================================================================\n`
-                        await delay(500)
-                        throw errMsg
-                    }
                 
                 console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Verifying Email with otp ${kodeotp}...`)
                 const verifyOtp = await verifyOTP(email, kodeotp);
